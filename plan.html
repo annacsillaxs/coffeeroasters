@@ -133,15 +133,15 @@
           </div>
           <div class="subscribe__cards row">
             <div class="subscribe__card row col">
-              <h4 class="subscribe__title">250g</h4>
+              <h4 class="subscribe__title weight">250g</h4>
               <p class="subscribe__text">Perfect for the solo drinker. Yields about 12 delicious cups.</p>
             </div>
             <div class="subscribe__card row col">
-              <h4 class="subscribe__title">500g</h4>
+              <h4 class="subscribe__title weight">500g</h4>
               <p class="subscribe__text">Perfect option for a couple. Yields about 40 delectable cups.</p>
             </div>
             <div class="subscribe__card row col">
-              <h4 class="subscribe__title">1000g</h4>
+              <h4 class="subscribe__title weight">1000g</h4>
               <p class="subscribe__text">Perfect for offices and events. Yields about 90 delightful cups.</p>
             </div>
           </div>
@@ -174,21 +174,21 @@
           <div class="subscribe__cards row">
             <div class="subscribe__card row col">
               <h4 class="subscribe__title">Every week</h4>
-              <p class="subscribe__text">$14.00 per shipment. Includes free first-class shipping.</p>
+              <p class="subscribe__text">$<span class="subscribe__price" id="weekly">14.00</span> per shipment. Includes free first-class shipping.</p>
             </div>
             <div class="subscribe__card row col">
               <h4 class="subscribe__title">Every 2 weeks</h4>
-              <p class="subscribe__text">$17.25 per shipment. Includes free priority shipping.</p>
+              <p class="subscribe__text">$<span class="subscribe__price" id="byweekly">17.25</span> per shipment. Includes free priority shipping.</p>
             </div>
             <div class="subscribe__card row col">
               <h4 class="subscribe__title">Every month</h4>
-              <p class="subscribe__text">$22.50 per shipment. Includes free priority shipping.</p>
+              <p class="subscribe__text">$<span class="subscribe__price" id="monthly">22.50</span> per shipment. Includes free priority shipping.</p>
             </div>
           </div>
         </div>
         <div class="subscribe__summary row col bg--dark">
           <p class="subscribe__sum-title">Order Summary</p>
-          <h4 class="subscribe__order-sum">“I drink my coffee as <span id="how">_____</span>, with a <span id="type">_____</span> type of bean. <span id="weight">_____</span> ground ala <span id="grind">_____</span>, sent to me <span id="often">_____</span>.”</h4>
+          <h4 class="subscribe__order-sum">“I drink my coffee <span id='asOrUsing'>as</span> <span id="isCapsule" class="subscribe__span">_____</span>, with a <span class="subscribe__span">_____</span> type of bean. <span class="subscribe__span">_____</span> <span id="ground">ground ala <span class="subscribe__span" id='ground__span'>_____</span></span>, sent to me <span class="subscribe__span">_____</span>.”</h4>
         </div>
         <a href="#nav" class="subscribe__cta"><button disabled="disabled" class="btn btn--default" id="btn_create">Create my plan!</button></a>
       </section>
@@ -221,7 +221,7 @@
         <h2 class="modal__header">Order Summary</h2>
       </div>
       <div class="modal__content container">
-        <h4 class="modal__sum bg--light" id="modal__sum">“I drink my coffee as <span class="modal__span">Filter</span>, with
+        <h4 class="modal__sum bg--light" id="modal__sum">“I drink my coffee <span>as</span> <span class="modal__span">Filter</span>, with
           a <span class="modal__span">Decaf</span> type of bean. <span class="modal__span">250g</span> ground ala <span
             class="modal__span">Cafetiére</span>, sent to me <span class="modal__span">Every Week</span>.”</h4>
         <p class="modal__text">Is this correct? You can proceed to checkout or go back to plan selection if something is

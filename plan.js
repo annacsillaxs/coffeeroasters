@@ -5,7 +5,7 @@ const cardsArr = document.querySelectorAll('.subscribe__cards');
 const asideArr = document.querySelectorAll('.subscribe__item');
 const arrowsArr = document.querySelectorAll('.subscribe__arrow');
 const optionsArr = document.querySelectorAll('.subscribe__option');
-const sumNodeList = document.querySelectorAll('.subscribe__order-sum span');
+const sumNodeList = document.querySelectorAll('.subscribe__span');
 const sumArr = Array.from(sumNodeList);
 
 
@@ -13,14 +13,14 @@ const sumArr = Array.from(sumNodeList);
 
 // * If "Capsule" is selected for the first option
 //   * The "Want us to grind them?" section should be disabled and not able to be opened
-// - Order summary texts updates
-//   - If "Capsule" is selected, update the order summary text to:
-//     - "I drink my coffee **using** Capsules"
-//     - Remove the grind selection text
-//   - If "Filter" or "Espresso" are selected, update the order summary text to:
-//     - "I drink my coffee **as** Filter||Espresso"
-//     - Keep/Add the grind selection text
-//   - For all other selections, add the selection title in the blank space where appropriate
+// * Order summary texts updates
+//   * If "Capsule" is selected, update the order summary text to:
+//     * "I drink my coffee **using** Capsules"
+//     * Remove the grind selection text
+//   * If "Filter" or "Espresso" are selected, update the order summary text to:
+//     * "I drink my coffee **as** Filter||Espresso"
+//     * Keep/Add the grind selection text
+//   *For all other selections, add the selection title in the blank space where appropriate
 // - Updating per shipment price (shown in "How often should we deliver?" section at the bottom) based on weight selected
 //   - If 250g weight is selected
 //     - Every Week price per shipment is $7.20
@@ -76,6 +76,7 @@ function toggleOpen(clicked) {
       }
     }
   }
+  
 }
 
 // ========== Toggle selected class on card
@@ -101,7 +102,7 @@ function disableGrind(chosen, row) {
   if (chosen === 'Capsule' && row === 0) {
     grind_arrow.classList.add('disabled');
     grind_aside.classList.add('disabled');
-    grind_arrow.classList.remove('open');
+    grind_arrow.parentNode.parentNode.classList.remove('open');
     grind_aside.classList.remove('open');
   } else if (chosen !== 'Capsule' && row === 0) {
     grind_arrow.classList.remove('disabled');
@@ -114,11 +115,108 @@ function disableGrind(chosen, row) {
 function selectedToSummary(card) {
   const selectedText = toggleSelected(card)[0];
   const selectedCardsIdx = toggleSelected(card)[1];
- 
+  const asOrUsing = document.querySelector('#asOrUsing');
+  const isCapsule = document.querySelector('#isCapsule');
+  const ground = document.querySelector('#ground');
+
   sumNodeList[selectedCardsIdx].innerText = selectedText;
 
+  if (isCapsule.innerText === 'Capsule') {
+    asOrUsing.innerText = 'using';
+    // innerText empty
+    ground.innerHTML = '<span class="subscribe__span" id="ground__span"></span>';
+  } else {
+    asOrUsing.innerText = 'as';
+    ground.innerHTML = `ground ala <span class="subscribe__span" id="ground__span">${sumNodeList[3].innerText}</span>`;
+  }
+  if (selectedCardsIdx === 3) {
+    ground.innerHTML = `ground ala <span class="subscribe__span" id="ground__span">${selectedText}</span>`;
+  } 
+
   let counter = isSumCompleted();
-  console.log(counter)
+  calculatePrice(selectedText);
+  console.log(document.querySelector('.subscribe__order-sum').innerHTML)
+}
+
+// ========== Calculate price
+function calculatePrice(text) {
+  const priceNodeList = document.querySelectorAll('.subscribe__price');
+  const spanNodeList = document.querySelectorAll('.subscribe__span');
+  const spanArr = Array.from(spanNodeList);
+  const text_price = document.querySelector('#price');
+  const btn_price = document.querySelector('#btn_price');
+  let priceArr;
+
+
+  pricing = {
+    '250g': {
+      'Every week': {
+        'price' : 7.20,
+        'multiplier' : 4
+      },
+      'Every 2 weeks': {
+        'price' : 9.60,
+        'multiplier' : 2
+      },
+      'Every month': 12.00
+    },
+    '500g': {
+      'Every week': {
+        'price' : 13.00,
+        'multiplier' : 4
+      },
+      'Every 2 weeks': {
+        'price' : 17.50,
+        'multiplier' : 2
+      },
+      'Every month': 22.00
+    },
+    '1000g': {
+      'Every week': {
+        'price' : 22.00,
+        'multiplier' : 4
+      },
+      'Every 2 weeks': {
+        'price' : 32.00,
+        'multiplier' : 2
+      },
+      'Every month': 42.00
+    }
+  }
+
+
+
+
+
+  if (text === '250g' || text === '500g' || text === '1000g') {
+    if (text === '250g') {
+      priceArr = [7.20, 9.60, 12.00];
+    }
+    if (text === '500g') {
+      priceArr = [13.00, 17.50, 22.00];
+    }
+    if (text === '1000g') {
+      priceArr = [22.00, 32.00, 42.00];
+    }
+  
+    for (let i = 0; i < priceArr.length; i++) {
+      priceNodeList[i].innerText = priceArr[i].toFixed(2);
+
+      if (priceNodeList[i].parentNode.parentNode.classList.contains('selected')) {
+        let multiply = 1;
+
+        if (i === 0) {
+          multiply = 4;
+        } else if (i === 1) {
+          multiply = 2;
+        }
+
+        text_price.innerText = (priceArr[i] * multiply).toFixed(2);
+        btn_price.innerText = (priceArr[i] * multiply).toFixed(2);
+      }
+    }
+  } 
+  return;
 }
 
 // ========== Check if summary isCompleted
@@ -131,11 +229,11 @@ function isSumCompleted() {
       counter++
     } 
   }
-  // if (grind_arrow.classList.contains('disabled')) {
-  //   counter++
-  // }
+
   if (counter === sumNodeList.length || (grind_arrow.classList.contains('disabled') && counter === sumNodeList.length - 1)) {
     document.querySelector('#btn_create').disabled = false;
+  } else {
+    document.querySelector('#btn_create').disabled = true;
   }
 
   return counter;
@@ -172,6 +270,5 @@ document.querySelector('#btn_create').addEventListener('click', () => {
 
 // Close Modal
 document.querySelector('#close__modal').addEventListener('click', () => {
-  console.log('click')
    document.querySelector('.modal').classList.remove('show')
 })
