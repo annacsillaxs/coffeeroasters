@@ -157,7 +157,7 @@ li > a {
   color: #fefcf7;
   margin-bottom: 3rem; }
   .about__bg {
-    background-image: url(/starter-code/assets/about/desktop/image-hero-whitecup.jpg);
+    background-image: url(/assets/about/desktop/image-hero-whitecup.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -172,12 +172,12 @@ li > a {
     margin: 2rem auto 0 0; }
   @media (max-width: 1000px) {
     .about__bg {
-      background-image: url(/starter-code/assets/about/tablet/image-hero-whitecup.jpg); } }
+      background-image: url(/assets/about/tablet/image-hero-whitecup.jpg); } }
   @media (max-width: 600px) {
     .about {
       margin-bottom: 0; }
       .about__bg {
-        background-image: url(/starter-code/assets/about/mobile/image-hero-whitecup.jpg); }
+        background-image: url(/assets/about/mobile/image-hero-whitecup.jpg); }
       .about__container {
         padding: 4rem 2rem;
         align-items: center;
@@ -276,7 +276,7 @@ li > a {
 .hero {
   color: #fefcf7; }
   .hero__bg {
-    background-image: url(/starter-code/assets/home/desktop/image-hero-coffeepress.jpg);
+    background-image: url(/assets/home/desktop/image-hero-coffeepress.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -292,7 +292,7 @@ li > a {
     color: #83888f; }
   @media (max-width: 600px) {
     .hero__bg {
-      background-image: url(/starter-code/assets/home/mobile/image-hero-coffeepress.jpg); }
+      background-image: url(/assets/home/mobile/image-hero-coffeepress.jpg); }
     .hero__container {
       margin: 6em auto;
       text-align: center;
@@ -526,17 +526,17 @@ li > a {
     background-repeat: no-repeat;
     cursor: pointer; }
   .footer__icon--fb {
-    background-image: url(/starter-code/assets/shared/desktop/icon-facebook.svg); }
+    background-image: url(/assets/shared/desktop/icon-facebook.svg); }
   .footer__icon--tw {
-    background-image: url(/starter-code/assets/shared/desktop/icon-twitter.svg); }
+    background-image: url(/assets/shared/desktop/icon-twitter.svg); }
   .footer__icon--insta {
-    background-image: url(/starter-code/assets/shared/desktop/icon-instagram.svg); }
+    background-image: url(/assets/shared/desktop/icon-instagram.svg); }
   .footer__icon--fb:hover, .footer__icon--fb:focus {
-    background-image: url(/starter-code/assets/shared/desktop/icon-facebook-hover.svg); }
+    background-image: url(/assets/shared/desktop/icon-facebook-hover.svg); }
   .footer__icon--tw:hover, .footer__icon--tw:focus {
-    background-image: url(/starter-code/assets/shared/desktop/icon-twitter-hover.svg); }
+    background-image: url(/assets/shared/desktop/icon-twitter-hover.svg); }
   .footer__icon--insta:hover, .footer__icon--insta:focus {
-    background-image: url(/starter-code/assets/shared/desktop/icon-instagram-hover.svg); }
+    background-image: url(/assets/shared/desktop/icon-instagram-hover.svg); }
   .footer span + span {
     margin-left: 2rem; }
   @media (max-width: 1000px) {
@@ -694,7 +694,7 @@ li > a {
 .cta-hero {
   color: #fefcf7; }
   .cta-hero__bg {
-    background-image: url(/starter-code/assets/plan/desktop/image-hero-blackcup.jpg);
+    background-image: url(/assets/plan/desktop/image-hero-blackcup.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -707,12 +707,12 @@ li > a {
     margin: 2rem auto 0 0; }
   @media (max-width: 1000px) {
     .cta-hero__bg {
-      background-image: url(/starter-code/assets/plan/tablet/image-hero-blackcup.jpg); } }
+      background-image: url(/assets/plan/tablet/image-hero-blackcup.jpg); } }
   @media (max-width: 600px) {
     .cta-hero {
       text-align: center; }
       .cta-hero__bg {
-        background-image: url(/starter-code/assets/plan/mobile/image-hero-blackcup.jpg); }
+        background-image: url(/assets/plan/mobile/image-hero-blackcup.jpg); }
       .cta-hero__text {
         margin: 2rem auto; } }
 

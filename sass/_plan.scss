@@ -2,7 +2,7 @@
   color: $clr-light;
 
   &__bg {
-    background-image: url(/starter-code/assets/plan/desktop/image-hero-blackcup.jpg);
+    background-image: url(/assets/plan/desktop/image-hero-blackcup.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -21,7 +21,7 @@
 
   @media (max-width: $desktop) {
     &__bg {
-      background-image: url(/starter-code/assets/plan/tablet/image-hero-blackcup.jpg);
+      background-image: url(/assets/plan/tablet/image-hero-blackcup.jpg);
     }
   }
 
@@ -29,7 +29,7 @@
     text-align: center;
 
     &__bg {
-      background-image: url(/starter-code/assets/plan/mobile/image-hero-blackcup.jpg);
+      background-image: url(/assets/plan/mobile/image-hero-blackcup.jpg);
     }
 
     &__text {

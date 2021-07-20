@@ -4,7 +4,7 @@
   color: $clr-light;
 
   &__bg {
-    background-image: url(/starter-code/assets/home/desktop/image-hero-coffeepress.jpg);
+    background-image: url(/assets/home/desktop/image-hero-coffeepress.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -28,7 +28,7 @@
 
   @media (max-width: $tablet) {
     &__bg {
-      background-image: url(/starter-code/assets/home/mobile/image-hero-coffeepress.jpg);
+      background-image: url(/assets/home/mobile/image-hero-coffeepress.jpg);
     }
 
     &__container {
@@ -414,30 +414,30 @@
   }
 
   &__icon--fb {
-    background-image: url(/starter-code/assets/shared/desktop/icon-facebook.svg);
+    background-image: url(/assets/shared/desktop/icon-facebook.svg);
   }
 
   &__icon--tw {
-    background-image: url(/starter-code/assets/shared/desktop/icon-twitter.svg);
+    background-image: url(/assets/shared/desktop/icon-twitter.svg);
   }
 
   &__icon--insta {
-    background-image: url(/starter-code/assets/shared/desktop/icon-instagram.svg);
+    background-image: url(/assets/shared/desktop/icon-instagram.svg);
   }
 
   &__icon--fb:hover,
   &__icon--fb:focus {
-    background-image: url(/starter-code/assets/shared/desktop/icon-facebook-hover.svg);
+    background-image: url(/assets/shared/desktop/icon-facebook-hover.svg);
   }
 
   &__icon--tw:hover,
   &__icon--tw:focus {
-    background-image: url(/starter-code/assets/shared/desktop/icon-twitter-hover.svg);
+    background-image: url(/assets/shared/desktop/icon-twitter-hover.svg);
   }
 
   &__icon--insta:hover,
   &__icon--insta:focus {
-    background-image: url(/starter-code/assets/shared/desktop/icon-instagram-hover.svg);
+    background-image: url(/assets/shared/desktop/icon-instagram-hover.svg);
   }
 
   span + span {
