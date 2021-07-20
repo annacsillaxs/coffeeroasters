@@ -1,0 +1,247 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./starter-code/assets/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/starter-code/css/style.css">
+
+
+
+  <title>Frontend Mentor | Coffeeroasters subscription site</title>
+</head>
+
+<body>
+
+    <nav class="nav container row" id="nav">
+      <img class="nav__img" src="/starter-code/assets/shared/desktop/logo.svg" alt="coffeeroasters logo">
+      <ul class="nav__list row">
+        <li class="nav__item"><a href="index.html">Home</a></li>
+        <li class="nav__item"><a href="about.html">About</a></li>
+        <li class="nav__item active"><a class="active" href="plan.html">Create your plan</a></li>
+      </ul>
+      <img class="nav__burger btn-burger" src="/starter-code/assets/shared/mobile/icon-hamburger.svg" alt="open" id="btn-burger">
+      <img class="nav__X btn-x" src="/starter-code/assets/shared/mobile/icon-close.svg" alt="close" id="btn-x">
+    </nav>
+  
+    <nav class="mobile-nav container row col">
+      <div class="mobile-nav__logo-box row">
+        <img class="mobile-nav__logo" src="/starter-code/assets/shared/desktop/logo.svg" alt="coffeeroasters logo">
+      </div>
+      <div class="mobile-nav__list row col">
+        <h4 class="mobile-nav__item"><a href="index.html">Home</a></h4>
+        <h4 class="mobile-nav__item"><a href="about.html">About</a></h4>
+        <h4 class="mobile-nav__item"><a href="plan.html">Create your plan</a></h4>
+      </div>
+    </nav>
+  
+    <header class="cta-hero container row">
+      <div class="cta-hero__bg">
+        <div class="cta-hero__container row col container--sm">
+          <h1 class="cta-hero__title">Create a plan</h1>
+          <p class="cta-hero__text">Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.</p>
+        </div>
+      </div>
+    </header>
+  
+    <section class="steps row col container">
+      <div class="steps__bg bg--dark">
+        <div class="steps__cards-box container--sm row">
+          <div class="steps__card row col">
+            <div class="steps__circle"></div>
+            <h1 class="steps__number">01</h1>
+            <h3 class="steps__title steps__title--light">Pick your coffee</h3>
+            <p class="steps__desc">Select from our evolving range of artisan coffees. Our beans are ethically sourced and we
+              pay fair prices for them. There are new coffees in all profiles every month for you to try out.</p>
+          </div>
+          <div class="steps__card row col">
+            <div class="steps__circle"></div>
+            <h1 class="steps__number">02</h1>
+            <h3 class="steps__title steps__title--light">Choose the frequency</h3>
+            <p class="steps__desc">Customize your order frequency, quantity, even your roast style and grind type. Pause,
+              skip or cancel your subscription with no commitment through our online portal.</p>
+          </div>
+          <div class="steps__card row col">
+            <div class="steps__circle"></div>
+            <h1 class="steps__number">03</h1>
+            <h3 class="steps__title steps__title--light">Receive and enjoy!</h3>
+            <p class="steps__desc">We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
+              world-class coffees curated to provide a distinct tasting experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="subscribe container--sm row">
+      <aside class="subscribe__aside">
+        <ul class="subscribe__list row col">
+          <h4 class="open subscribe__item open__1"><span class="subscribe__number">01</span>Preferences</h4>
+          <h4 class="subscribe__item open__2"><span class="subscribe__number">02</span>Bean type</h4>
+          <h4 class="subscribe__item open__3"><span class="subscribe__number">03</span>Quantity</h4>
+          <h4 class="subscribe__item open__4" id="grind_aside"><span class="subscribe__number">04</span>Grind option</h4>
+          <h4 class="subscribe__item open__5"><span class="subscribe__number">05</span>Deliveries</h4>
+        </ul>
+      </aside>
+      <section class="subscribe__content row col">
+        <div class="open subscribe__option row col" id="option__1">
+          <div class="subscribe__header-box row">
+            <h2 class="subscribe__header">How do you drink your coffee?</h2>
+            <img id="open__1" src="/starter-code/assets/plan/desktop/icon-arrow.svg" alt="open options" class="subscribe__arrow">
+          </div>
+          <div class="subscribe__cards row">
+            <div class="subscribe__card row col ">
+              <h4 class="subscribe__title">Capsule</h4>
+              <p class="subscribe__text">Compatible with Nespresso systems and similar brewers</p>
+            </div>
+            <div class="subscribe__card row col ">
+              <h4 class="subscribe__title">Filter</h4>
+              <p class="subscribe__text">For pour over or drip methods like Aeropress, Chemex, and V60</p>
+            </div>
+            <div class="subscribe__card row col ">
+              <h4 class="subscribe__title">Espresso</h4>
+              <p class="subscribe__text">Dense and finely ground beans for an intense, flavorful experience</p>
+            </div>
+          </div>
+        </div>
+        <div class="subscribe__option row col">
+          <div class="subscribe__header-box row">
+            <h2 class="subscribe__header">What type of coffee?</h2>
+            <img id="open__2" src="/starter-code/assets/plan/desktop/icon-arrow.svg" alt="open options" class="subscribe__arrow">
+          </div>
+          <div class="subscribe__cards row">
+            <div class="subscribe__card row col">
+              <h4 class="subscribe__title">Single origin</h4>
+              <p class="subscribe__text">Distinct, high quality coffee from a specific family-owned farm</p>
+            </div>
+            <div class="subscribe__card row col">
+              <h4 class="subscribe__title">Decaf</h4>
+              <p class="subscribe__text">Just like regular coffee, except the caffeine has been removed</p>
+            </div>
+            <div class="subscribe__card row col">
+              <h4 class="subscribe__title">Blended</h4>
+              <p class="subscribe__text">Combination of two or three dark roasted beans of organic coffees</p>
+            </div>
+          </div>
+        </div>
+        <div class="subscribe__option row col">
+          <div class="subscribe__header-box row">
+            <h2 class="subscribe__header">How much would you like?</h2>
+            <img id="open__3" src="/starter-code/assets/plan/desktop/icon-arrow.svg" alt="open options" class="subscribe__arrow">
+          </div>
+          <div class="subscribe__cards row">
+            <div class="subscribe__card row col">
+              <h4 class="subscribe__title">250g</h4>
+              <p class="subscribe__text">Perfect for the solo drinker. Yields about 12 delicious cups.</p>
+            </div>
+            <div class="subscribe__card row col">
+              <h4 class="subscribe__title">500g</h4>
+              <p class="subscribe__text">Perfect option for a couple. Yields about 40 delectable cups.</p>
+            </div>
+            <div class="subscribe__card row col">
+              <h4 class="subscribe__title">1000g</h4>
+              <p class="subscribe__text">Perfect for offices and events. Yields about 90 delightful cups.</p>
+            </div>
+          </div>
+        </div>
+        <div class="subscribe__option row col">
+          <div class="subscribe__header-box row">
+            <h2 class="subscribe__header">Want us to grind them?</h2>
+            <img id="open__4" src="/starter-code/assets/plan/desktop/icon-arrow.svg" alt="open options" class="subscribe__arrow">
+          </div>
+          <div class="subscribe__cards row">
+            <div class="subscribe__card row col">
+              <h4 class="subscribe__title">Wholebean</h4>
+              <p class="subscribe__text">Best choice if you cherish the full sensory experience</p>
+            </div>
+            <div class="subscribe__card row col">
+              <h4 class="subscribe__title">Filter</h4>
+              <p class="subscribe__text">For drip or pour-over coffee methods such as V60 or Aeropress</p>
+            </div>
+            <div class="subscribe__card row col">
+              <h4 class="subscribe__title">Cafetiére</h4>
+              <p class="subscribe__text">Course ground beans specially suited for french press coffee</p>
+            </div>
+          </div>
+        </div>
+        <div class="subscribe__option row col">
+          <div class="subscribe__header-box row">
+            <h2 class="subscribe__header">How often should we deliver?</h2>
+            <img id="open__5" src="/starter-code/assets/plan/desktop/icon-arrow.svg" alt="open options" class="subscribe__arrow">
+          </div>
+          <div class="subscribe__cards row">
+            <div class="subscribe__card row col">
+              <h4 class="subscribe__title">Every week</h4>
+              <p class="subscribe__text">$14.00 per shipment. Includes free first-class shipping.</p>
+            </div>
+            <div class="subscribe__card row col">
+              <h4 class="subscribe__title">Every 2 weeks</h4>
+              <p class="subscribe__text">$17.25 per shipment. Includes free priority shipping.</p>
+            </div>
+            <div class="subscribe__card row col">
+              <h4 class="subscribe__title">Every month</h4>
+              <p class="subscribe__text">$22.50 per shipment. Includes free priority shipping.</p>
+            </div>
+          </div>
+        </div>
+        <div class="subscribe__summary row col bg--dark">
+          <p class="subscribe__sum-title">Order Summary</p>
+          <h4 class="subscribe__order-sum">“I drink my coffee as <span id="how">_____</span>, with a <span id="type">_____</span> type of bean. <span id="weight">_____</span> ground ala <span id="grind">_____</span>, sent to me <span id="often">_____</span>.”</h4>
+        </div>
+        <a href="#nav" class="subscribe__cta"><button disabled="disabled" class="btn btn--default" id="btn_create">Create my plan!</button></a>
+      </section>
+      
+    </section>
+  
+    <footer class="footer container row">
+      <div class="footer__bg bg--dark container">
+        <div class="footer__wrapper row container--sm">
+          <img class="footer__logo" src="/starter-code/assets/shared/desktop/logo-light.svg" alt="coffeeroasters logo">
+          <ul class="footer__list row">
+            <li class="footer__link"><a href="index.html">Home</a></li>
+            <li class="footer__link"><a href="about.html">About</a></li>
+            <li class="footer__link"><a href="plan.html">Create your plan</a></li>
+          </ul>
+          <div class="footer__icons row">
+            <span class="footer__icon footer__icon--fb"></span>
+            <span class="footer__icon footer__icon--tw"></span>
+            <span class="footer__icon footer__icon--insta"></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <!-- Modal -->
+  <section class="modal" id="modal">
+    <div class="modal__wrapper">
+      <img class="modal__close" src="/starter-code/assets/shared/mobile/icon-close--light.svg" alt="close" id="close__modal">
+      <div class="modal__header-box container bg--dark">
+        <h2 class="modal__header">Order Summary</h2>
+      </div>
+      <div class="modal__content container">
+        <h4 class="modal__sum bg--light" id="modal__sum">“I drink my coffee as <span class="modal__span">Filter</span>, with
+          a <span class="modal__span">Decaf</span> type of bean. <span class="modal__span">250g</span> ground ala <span
+            class="modal__span">Cafetiére</span>, sent to me <span class="modal__span">Every Week</span>.”</h4>
+        <p class="modal__text">Is this correct? You can proceed to checkout or go back to plan selection if something is
+          off. Subscription discount codes can also be redeemed at the checkout.</p>
+        <div class="modal__cta-box row">
+          <h3 class="modal__price">$<span id="price">14.00</span>/month</h3>
+          <a href="#"><button class="modal__btn btn btn--default">Checkout</button></a>
+          <a href="#"><button class="modal__btn--mobile btn btn--default">Checkout - $<span id="btn_price">14.00</span>/month</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End modal -->
+
+
+ 
+
+
+  <script src="/starter-code/app.js"></script>
+  <script src="/starter-code/plan.js"></script>
+</body>
+
+</html>

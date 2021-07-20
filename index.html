@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./starter-code/assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/starter-code/css/style.css">
+
+
+  <title>Frontend Mentor | Coffeeroasters subscription site</title>
+</head>
+
+<body>
+
+  <nav class="nav container row">
+    <img class="nav__img" src="./assets/shared/desktop/logo.svg" alt="coffeeroasters logo">
+    <ul class="nav__list row">
+      <li class="nav__item active"><a class="active" href="index.html">Home</a></li>
+      <li class="nav__item"><a href="about.html">About</a></li>
+      <li class="nav__item"><a href="plan.html">Create your plan</a></li>
+    </ul>
+    <img class="nav__burger btn-burger" src="/starter-code/assets/shared/mobile/icon-hamburger.svg" alt="open" id="btn-burger">
+    <img class="nav__X btn-x" src="/starter-code/assets/shared/mobile/icon-close.svg" alt="close" id="btn-x">
+  </nav>
+  
+  <nav class="mobile-nav container row col">
+    <div class="mobile-nav__logo-box row">
+      <img class="mobile-nav__logo" src="/starter-code/assets/shared/desktop/logo.svg" alt="coffeeroasters logo">
+    </div>
+    <div class="mobile-nav__list row col">
+      <h4 class="mobile-nav__item"><a href="index.html">Home</a></h4>
+      <h4 class="mobile-nav__item"><a href="about.html">About</a></h4>
+      <h4 class="mobile-nav__item"><a href="plan.html">Create your plan</a></h4>
+    </div>
+  </nav>
+
+  <header class="hero container row">
+    <div class="hero__bg">
+      <div class="hero__container">
+        <h1 class="hero__title">Great coffee made simple.</h1>
+        <p class="hero__text">Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees
+          from our best roasters delivered directly to your door, at your schedule.</p>
+        <a href="#" class="hero__cta btn btn--default">Create your plan</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <h1 class="content__header content__header--lg">Our collection</h1>
+    <div class="content__wrapper container--sm row">
+      <div class="content__card row col">
+        <div class="content__img-box grid">
+          <img class="content__img" src="/starter-code/assets/home/desktop/image-gran-espresso.png" alt="gran espresso">
+        </div>
+        <div class="content__text-box row col">
+          <h4 class="content__title">Gran Espresso</h4>
+          <p class="content__desc">Light and flavorful blend with cocoa and black pepper for an intense experience</p>
+        </div>
+      </div>
+      <div class="content__card row col">
+        <div class="content__img-box grid">
+          <img class="content__img" src="/starter-code/assets/home/desktop/image-planalto.png" alt="gran espresso">
+        </div>
+        <div class="content__text-box row col">
+          <h4 class="content__title">Planalto</h4>
+          <p class="content__desc">Brazilian dark roast with rich and velvety body, and hints of fruits and nuts</p>
+        </div>
+      </div>
+      <div class="content__card row col">
+        <div class="content__img-box grid">
+          <img class="content__img" src="/starter-code/assets/home/desktop/image-piccollo.png" alt="gran espresso">
+        </div>
+        <div class="content__text-box row col">
+          <h4 class="content__title">Piccollo</h4>
+          <p class="content__desc">Mild and smooth blend featuring notes of toasted almond and dried cherry</p>
+        </div>
+      </div>
+      <div class="content__card row col">
+        <div class="content__img-box grid">
+          <img class="content__img" src="/starter-code/assets/home/desktop/image-danche.png" alt="gran espresso">
+        </div>
+        <div class="content__text-box row col">
+          <h4 class="content__title">Danche</h4>
+          <p class="content__desc">Ethiopian hand-harvested blend densely packed with vibrant fruit notes</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="perks container row col">
+    <div class="perks__bg--dark bg--dark container row">
+      <div class="perks__intro container--sm">
+        <h2 class="perks__title">Why choose us?</h2>
+        <p class="perks__text">A large part of our role is choosing which particular coffees will be feature in our
+          range.
+          This means working closely with the best coffee growers to give you a more impactful experience on every
+          level.
+        </p>
+      </div>
+    </div>
+    <div class="perks__cards row container--sm">
+      <div class="perks__card row col">
+        <div class="perks__img-box grid">
+          <img class="perks__icon" src="/starter-code/assets/home/desktop/icon-coffee-bean.svg" alt="coffee bean">
+        </div>
+        <div class="perks__text-box row col">
+          <h4 class="perks__title">Best quality</h4>
+          <p class="perks__desc">Discover an endless variety of the world’s best artisan coffee from each of our roasters.
+        </div>
+        </p>
+      </div>
+      <div class="perks__card row col">
+        <div class="perks__img-box grid">
+          <img class="perks__icon" src="/starter-code/assets/home/desktop/icon-gift.svg" alt="gift">
+        </div>
+        <div class="perks__text-box row col">
+          <h4 class="perks__title">Exclusive benefits</h4>
+          <p class="perks__desc">Special offers and swag when you subscribe, including 30% off your first shipment.</p>
+        </div>
+      </div>
+      <div class="perks__card row col">
+        <div class="perks__img-box grid">
+          <img class="perks__icon" src="/starter-code/assets/home/desktop/icon-truck.svg" alt="truck">
+        </div>
+        <div class="perks__text-box row col">
+          <h4 class="perks__title">Free shipping</h4>
+          <p class="perks__desc">We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps row col container--sm ">
+    <h3 class="steps__header">How it works</h3>
+    <div class="steps__cards-box row">
+      <div class="steps__card row col">
+        <div class="steps__circle"></div>
+        <h1 class="steps__number">01</h1>
+        <h3 class="steps__title">Pick your coffee</h3>
+        <p class="steps__desc">Select from our evolving range of artisan coffees. Our beans are ethically sourced and we
+          pay fair prices for them. There are new coffees in all profiles every month for you to try out.</p>
+      </div>
+      <div class="steps__card row col">
+        <div class="steps__circle"></div>
+        <h1 class="steps__number">02</h1>
+        <h3 class="steps__title">Choose the frequency</h3>
+        <p class="steps__desc">Customize your order frequency, quantity, even your roast style and grind type. Pause,
+          skip or cancel your subscription with no commitment through our online portal.</p>
+      </div>
+      <div class="steps__card row col">
+        <div class="steps__circle"></div>
+        <h1 class="steps__number">03</h1>
+        <h3 class="steps__title">Receive and enjoy!</h3>
+        <p class="steps__desc">We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
+          world-class coffees curated to provide a distinct tasting experience.</p>
+      </div>
+    </div>
+    <a href="plan.html" class="steps__cta btn btn--default">Create your plan</a>
+  </section>
+
+<footer class="footer container row">
+  <div class="footer__bg bg--dark container">
+    <div class="footer__wrapper row container--sm">
+      <img class="footer__logo" src="/starter-code/assets/shared/desktop/logo-light.svg" alt="coffeeroasters logo">
+      <ul class="footer__list row">
+        <li class="footer__link"><a href="index.html">Home</a></li>
+        <li class="footer__link"><a href="about.html">About</a></li>
+        <li class="footer__link"><a href="plan.html">Create your plan</a></li>
+      </ul>
+      <div class="footer__icons row">
+        <span class="footer__icon footer__icon--fb"></span>
+        <span class="footer__icon footer__icon--tw"></span>
+        <span class="footer__icon footer__icon--insta"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+
+</footer>
+</body>
+
+</html>
