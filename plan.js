@@ -111,6 +111,7 @@ function disableGrind(chosen, row) {
 }
 
 
+const selectedArr = [];
 // ========== Add Selected to Summary
 function selectedToSummary(card) {
   const selectedText = toggleSelected(card)[0];
@@ -120,6 +121,8 @@ function selectedToSummary(card) {
   const ground = document.querySelector('#ground');
 
   sumNodeList[selectedCardsIdx].innerText = selectedText;
+  selectedArr.push([selectedText, selectedCardsIdx]);
+  console.log(selectedArr)
 
   if (isCapsule.innerText === 'Capsule') {
     asOrUsing.innerText = 'using';
@@ -134,89 +137,57 @@ function selectedToSummary(card) {
   } 
 
   let counter = isSumCompleted();
-  calculatePrice(selectedText);
-  console.log(document.querySelector('.subscribe__order-sum').innerHTML)
+  calculatePrice(selectedText, selectedCardsIdx);
+  // console.log(document.querySelector('.subscribe__order-sum').innerHTML)
 }
 
+
+let sumPrice;
 // ========== Calculate price
-function calculatePrice(text) {
-  const priceNodeList = document.querySelectorAll('.subscribe__price');
-  const spanNodeList = document.querySelectorAll('.subscribe__span');
-  const spanArr = Array.from(spanNodeList);
+function calculatePrice(chosen_option, num) {
+  const weekly_price = document.querySelector('#weekly');
+  const biweekly_price = document.querySelector('#biweekly');
+  const monthly_price = document.querySelector('#monthly');
+
   const text_price = document.querySelector('#price');
   const btn_price = document.querySelector('#btn_price');
-  let priceArr;
-
 
   pricing = {
     '250g': {
-      'Every week': {
-        'price' : 7.20,
-        'multiplier' : 4
-      },
-      'Every 2 weeks': {
-        'price' : 9.60,
-        'multiplier' : 2
-      },
+      'Every week': 7.20,
+      'Every 2 weeks': 9.60,
       'Every month': 12.00
     },
     '500g': {
-      'Every week': {
-        'price' : 13.00,
-        'multiplier' : 4
-      },
-      'Every 2 weeks': {
-        'price' : 17.50,
-        'multiplier' : 2
-      },
+      'Every week': 13.00,
+      'Every 2 weeks': 17.50,
       'Every month': 22.00
     },
-    '1000g': {
-      'Every week': {
-        'price' : 22.00,
-        'multiplier' : 4
-      },
-      'Every 2 weeks': {
-        'price' : 32.00,
-        'multiplier' : 2
-      },
+     '1000g': {
+      'Every week': 22.00,
+      'Every 2 weeks': 32.00,
       'Every month': 42.00
-    }
+    }, 
+    'weekly': 4,
+    'biweekly': 2
   }
 
+  if (pricing[chosen_option]) {
+    weekly_price.innerText = (pricing[chosen_option]['Every week']).toFixed(2);
+    biweekly_price.innerText = (pricing[chosen_option]['Every 2 weeks']).toFixed(2);
+    monthly_price.innerText = (pricing[chosen_option]['Every month']).toFixed(2);
+  }
 
-
-
-
-  if (text === '250g' || text === '500g' || text === '1000g') {
-    if (text === '250g') {
-      priceArr = [7.20, 9.60, 12.00];
-    }
-    if (text === '500g') {
-      priceArr = [13.00, 17.50, 22.00];
-    }
-    if (text === '1000g') {
-      priceArr = [22.00, 32.00, 42.00];
-    }
-  
-    for (let i = 0; i < priceArr.length; i++) {
-      priceNodeList[i].innerText = priceArr[i].toFixed(2);
-
-      if (priceNodeList[i].parentNode.parentNode.classList.contains('selected')) {
-        let multiply = 1;
-
-        if (i === 0) {
-          multiply = 4;
-        } else if (i === 1) {
-          multiply = 2;
-        }
-
-        text_price.innerText = (priceArr[i] * multiply).toFixed(2);
-        btn_price.innerText = (priceArr[i] * multiply).toFixed(2);
-      }
-    }
-  } 
-  return;
+  if (num === 2 || chosen_option === 'Every week') {
+    btn_price.innerText = (+weekly_price.innerText * pricing['weekly']).toFixed(2);
+    text_price.innerText = btn_price.innerText;
+  } else if (num === 2 || chosen_option === 'Every 2 weeks') {
+    btn_price.innerText = (+biweekly_price.innerText * pricing['biweekly']).toFixed(2);
+    text_price.innerText = btn_price.innerText;
+  } else if (num === 2 || chosen_option === 'Every month') {
+    btn_price.innerText = (+monthly_price.innerText).toFixed(2);
+    text_price.innerText = btn_price.innerText;
+  }
 }
 
 // ========== Check if summary isCompleted
