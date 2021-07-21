@@ -75,6 +75,9 @@
   &__title {
     margin-top: 0.5em;
     color: $clr-dark;
+    font-family: "Fraunces", serif;
+    font-size: 1.5rem;
+    line-height: 2;
   }
 
   &__desc {
@@ -175,6 +178,12 @@
   &__text-box {
     justify-content: flex-start;
     height: 100%;
+  }
+
+  &__title {
+    font-family: "Fraunces", serif;
+    font-size: 1.5rem;
+    line-height: 2;
   }
 
   &__desc {

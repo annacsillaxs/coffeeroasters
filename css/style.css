@@ -322,7 +322,10 @@ li > a {
     margin-bottom: 3rem; }
   .content__title {
     margin-top: 0.5em;
-    color: #333d4b; }
+    color: #333d4b;
+    font-family: "Fraunces", serif;
+    font-size: 1.5rem;
+    line-height: 2; }
   .content__desc {
     margin: 0.5em 0 4.5em;
     padding: 0 0.5em; }
@@ -382,6 +385,10 @@ li > a {
   .perks__text-box {
     justify-content: flex-start;
     height: 100%; }
+  .perks__title {
+    font-family: "Fraunces", serif;
+    font-size: 1.5rem;
+    line-height: 2; }
   .perks__desc {
     margin: 1rem 0; }
   .perks__card + div {
